@@ -1,0 +1,104 @@
+body {
+    background-color: #ECECEC;
+    /*TODO: Change?*/
+    /*font-family: "Times New Roman", Times, serif;*/
+}
+
+#navbar {
+    background-color: rgba(26, 137, 232, 1);
+}
+
+#navmenu li a {
+    color: #E2E2E2;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+#navmenu li a:hover {
+    color: #000000;
+
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.section {
+
+    margin: 2em 4%;
+
+    padding-bottom: 2em;
+
+    border-style: outset;
+    border-width: 1px;
+    border-color: #dedede;
+
+    border-radius: 10px;
+}
+
+.section_nav {
+    font-size: 3em;
+    color: transparent;
+}
+
+.section_title {
+    font-family: 'Arvo', serif;
+    font-weight: bold;
+}
+
+/* Sections */
+
+#sec_home {
+    background-color: #ffffff;
+    padding-top: 10%;
+}
+
+#sec_about {
+    background-image: url(http://innouvous.comlu.com/img/mountains-blur.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: white;
+}
+
+#languages {
+    background-color: rgba(43, 43, 43, 0.56);
+    margin: 2em auto;
+    width: auto;
+
+}
+
+#languages th {
+    text-align: center;
+}
+
+.web {
+    font-weight: bolder;
+    color: #FFB019;
+}
+
+#sec_portfolio {
+    color: white;
+    min-height: 60em;
+    background-color: #565656;
+}
+
+.portfolio_item {
+    border-radius: 10px;
+    border-width: 5px;
+    border-color: #818181;
+    border-style: ridge;
+    padding: 10px;
+
+    background-color: #d9d9d9;
+}
+
+.portfolio_img_div {
+    height: 10em;
+    display: table-cell;
+
+    vertical-align: middle;
+}
+
+.portfolio_img_div img {
+}
