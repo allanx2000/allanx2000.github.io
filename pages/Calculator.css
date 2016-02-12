@@ -1,0 +1,51 @@
+body {
+    background-color: rgba(0, 0, 0, 0.69);
+}
+
+#title {
+    color: white;
+    font-family: 'Lobster', cursive;
+
+}
+
+#calculator {
+
+    margin: auto;
+    position: relative;
+
+    background-color: white;
+
+    width: 20%;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    padding: 10px;
+}
+
+#buttons {
+    width: 95%;
+    margin: 0 auto;
+}
+
+#buttons td {
+    padding-bottom: 10px;
+}
+
+.key {
+    width: 90%;
+    font-size: 2em;
+}
+
+#screen {
+    font-size: 1em;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+
+    text-align: right;
+
+    border-radius: 10px;
+}
