@@ -114,7 +114,11 @@ body {
     display: table;
     font-size: 2em;
     text-align: center;
+    color: #ececec;
+}
 
+.portfolio_link:hover {
+    text-decoration: none;
 }
 
 .portfolio_img_div img {
