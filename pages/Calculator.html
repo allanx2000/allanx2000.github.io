@@ -18,19 +18,24 @@
 </head>
 <body>
 
-<div id="title">
-    <h1>Simple Calculator</h1>
-</div>
-
 <div style="height: 10vh">
 </div>
 
-<div id="calculator">
-    <div>
-        <input type="text" id="screen" disabled="true"/>
+<div class="container">
+
+    <div id="title">
+        <h1>Simple Calculator</h1>
     </div>
 
-    <table id="buttons">
+    <div class="row">
+
+        <div class="col-xs-3"></div>
+
+        <div id="calculator" class="col-xs-6">
+
+            <input type="text" id="screen" disabled="true"/>
+
+            <table id="buttons">
         <tr>
             <td colspan="2">
                 <button id="k_clear" class="btn btn-default key">Clear</button>
@@ -105,6 +110,9 @@
     </table>
 
     </div>
+    </div>
+
+</div>
 
 </body>
 </html>
