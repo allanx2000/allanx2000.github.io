@@ -27,9 +27,9 @@ body {
 
 .section {
 
-    margin: 2em 3vw;
 
     padding-bottom: 2em;
+
 
     border-style: outset;
     border-width: 1px;
@@ -39,7 +39,7 @@ body {
 }
 
 .section_nav {
-    padding-bottom: 3em;
+    padding-bottom: 4em;
 }
 
 .section_title {
@@ -78,6 +78,15 @@ body {
     text-align: center;
 }
 
+#languages ul {
+    padding: 0 15px;
+}
+
+#languages li {
+    margin-bottom: 5px;
+}
+
+
 .web {
     font-weight: bolder;
     color: #FFB019;
@@ -97,25 +106,36 @@ body {
     border-style: ridge;
     padding: 10px;
 
+    margin-bottom: 2vh;
+
     background-color: rgba(217, 217, 217, 0.65);
 }
 
 .portfolio_img_div {
-    height: 10em;
-    display: table-cell;
+    height: 30vh;
+    display: flex;
 
     vertical-align: middle;
-    padding: 0 auto;
+
 }
 
 .portfolio_link {
-    margin: 0 auto;
+    margin: 2vh auto;
     position: relative;
     display: table;
-    font-size: 2em;
+    font-size: 1.5em;
     text-align: center;
     color: #ececec;
+
 }
+
+.portfolio_link {
+    /*
+    font-size: 1em;
+    font-weight: bold;
+    */
+}
+
 
 .portfolio_link:hover {
     text-decoration: none;
@@ -123,14 +143,8 @@ body {
 
 .portfolio_img_div img {
 
-    margin: auto;
-    position: relative;
-
-    width: 100%;
-
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 
 }

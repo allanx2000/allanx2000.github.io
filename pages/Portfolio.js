@@ -1,10 +1,9 @@
 var portfolio;
-var gridSize = 3;
 var isCodePen;
 
 var PORTFOLIO_GRID = "#portfolio_grid";
 
-var colClasses = "col-xs-" + 2 * gridSize + " col-md-" + gridSize + " col-height";
+var colClasses = "col-xs-6 col-md-4 col-height";
 
 $("document").ready(function () {
     isCodePen = window.location.href.indexOf("codepen.io") >= 0;
@@ -57,16 +56,15 @@ function generatePortfolio() {
         item.append($("<div class='portfolio_img_div'><img src='" + project.img + "'/></div>"));
         item.append($("<a class='portfolio_link' target='_blank'  href='" + (isCodePen ? project.cp : project.url) + "'>" + project.name + "</a>"));
 
-        var inside = $("<div class='inside'></div>");
-        inside.append(item);
+        //var inside = $("<div class='inside'></div>");
+        //inside.append(item);
 
         var col = $("<div class='" + colClasses + "'/>");
-        col.append(inside);
+        col.append(item);
 
         items.push(col);
 
-        rowSize += gridSize;
-
+        /*
         if (gridSize == 12) {
 
             row = newRow(items);
@@ -75,7 +73,7 @@ function generatePortfolio() {
             $(PORTFOLIO_GRID).append(row);
             row = null;
             gridSize = 0;
-        }
+         }*/
 
     }
 
