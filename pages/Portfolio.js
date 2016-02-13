@@ -3,7 +3,7 @@ var isCodePen;
 
 var PORTFOLIO_GRID = "#portfolio_grid";
 
-var colClasses = "col-xs-6 col-md-4 col-height";
+var colClasses = "col-xs-12 col-md-4";
 
 $("document").ready(function () {
     isCodePen = window.location.href.indexOf("codepen.io") >= 0;
@@ -30,11 +30,12 @@ $("document").ready(function () {
 function newRow(items) {
     var row = $('<div class="row">');
 
-    var inner = $('<div class="row-height">');
-    row.append(inner);
+
+    //var inner = $('<div class="row-height">');
+    //row.append(inner);
 
     for (var i in items) {
-        inner.append(items[i]);
+        row.append(items[i]);
     }
 
     return row;
@@ -52,12 +53,17 @@ function generatePortfolio() {
         var project = portfolio[i];
 
         //TODO: Div to wrap image in fixed size box
-        var item = $("<div class='portfolio_item'/>");
-        item.append($("<div class='portfolio_img_div'><img src='" + project.img + "'/></div>"));
-        item.append($("<a class='portfolio_link center-text' target='_blank'  href='" + (isCodePen ? project.cp : project.url) + "'>" + project.name + "</a>"));
+        var item = $("<div class=''/>");
+        item.append($("<div class='portfolio_img_div'>" +
+            "<img class='img img-responsive center-block' src='" + project.img + "'>" +
+            "</div>"));
+        item.append($("<h4>" + project.name + "</h4>"));
+
+        var link = $("<a class='portfolio_item portfolio_link center-text' target='_blank'  href='" + (isCodePen ? project.cp : project.url) + "'></a>");
+        link.append(item);
 
         var col = $("<div class='" + colClasses + "'/>"); //Need this to put gap between items
-        col.append(item);
+        col.append(link);
 
         items.push(col);
 
