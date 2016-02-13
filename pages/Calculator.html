@@ -8,7 +8,7 @@
 
     <script src='Calculator.js'></script>
 
-    <link href='https://fonts.googleapis.com/css?family=Arvo:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:900' rel='stylesheet' type='text/css'>
 
     <link rel='stylesheet' href='Calculator.css'/>
     <link rel='stylesheet' href='Base.css'/>
@@ -18,7 +18,12 @@
 </head>
 <body>
 
-<h1 class="title">Simple Calculator</h1>
+<div id="title">
+    <h1>Simple Calculator</h1>
+</div>
+
+<div style="height: 10vh">
+</div>
 
 <div id="calculator">
     <div>
@@ -26,6 +31,15 @@
     </div>
 
     <table id="buttons">
+        <tr>
+            <td colspan="2">
+                <button id="k_clear" class="btn btn-default key">Clear</button>
+            </td>
+            <td colspan="2">
+                <button id="k_delete" class="btn btn-default key">Del</button>
+            </td>
+        </tr>
+
         <tr>
             <td>
                 <button id="k_1" class="btn btn-default key">1</button>
@@ -54,10 +68,43 @@
                 <button id="k_minus" class="btn btn-info key">-</button>
             </td>
         </tr>
+
+        <tr>
+            <td>
+                <button id="k_7" class="btn btn-default key">7</button>
+            </td>
+            <td>
+                <button id="k_8" class="btn btn-default key">8</button>
+            </td>
+            <td>
+                <button id="k_9" class="btn btn-default key">9</button>
+            </td>
+            <td>
+                <button id="k_times" class="btn btn-info key">*</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <button id="k_0" class="btn btn-default key">0</button>
+            </td>
+
+            <td>
+                <button id="k_dot" class="btn btn-default key">.</button>
+            </td>
+            <td></td>
+            <td>
+                <button id="k_div" class="btn btn-info key">/</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <button id="k_equals" class="btn btn-success key">&#61;</button>
+            </td>
+        </tr>
     </table>
 
-    <div>
-
     </div>
+
 </body>
 </html>

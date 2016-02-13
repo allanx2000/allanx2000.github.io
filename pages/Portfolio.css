@@ -9,7 +9,9 @@ body {
 }
 
 #navmenu li a {
-    color: #E2E2E2;
+    /*    color: #E2E2E2;*/
+
+    color: #ffffff;
     font-size: 13pt;
     font-weight: bold;
 }
@@ -25,7 +27,7 @@ body {
 
 .section {
 
-    margin: 2em 4%;
+    margin: 2em 3vw;
 
     padding-bottom: 2em;
 
@@ -37,13 +39,19 @@ body {
 }
 
 .section_nav {
-    font-size: 3em;
-    color: transparent;
+    padding-bottom: 3em;
 }
 
 .section_title {
     font-family: 'Arvo', serif;
     font-weight: bold;
+
+    font-size: 4em;
+    padding-bottom: 1em;
+
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Sections */
@@ -63,8 +71,6 @@ body {
 
 #languages {
     background-color: rgba(43, 43, 43, 0.56);
-    margin: 2em auto;
-    width: auto;
 
 }
 
@@ -80,7 +86,8 @@ body {
 #sec_portfolio {
     color: white;
     min-height: 60em;
-    background-color: #565656;
+    background-image: url(http://innouvous.comlu.com/img/projects.jpg);
+    background-size: cover;
 }
 
 .portfolio_item {
@@ -90,7 +97,7 @@ body {
     border-style: ridge;
     padding: 10px;
 
-    background-color: #d9d9d9;
+    background-color: rgba(217, 217, 217, 0.65);
 }
 
 .portfolio_img_div {
@@ -98,7 +105,28 @@ body {
     display: table-cell;
 
     vertical-align: middle;
+    padding: 0 auto;
+}
+
+.portfolio_link {
+    margin: 0 auto;
+    position: relative;
+    display: table;
+    font-size: 2em;
+    text-align: center;
+
 }
 
 .portfolio_img_div img {
+
+    margin: auto;
+    position: relative;
+
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
 }

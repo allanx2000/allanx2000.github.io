@@ -4,8 +4,12 @@ body {
 
 #title {
     color: white;
-    font-family: 'Lobster', cursive;
+    font-family: 'Orbitron', sans-serif;
+    font-size: x-large;
+    margin: 0 auto;
+    display: table;
 
+    margin-bottom: 2em;
 }
 
 #calculator {
@@ -34,9 +38,19 @@ body {
     padding-bottom: 10px;
 }
 
+.key:focus {
+    border-style: inset;
+}
+
 .key {
     width: 90%;
     font-size: 2em;
+    margin: 0 auto;
+    display: block;
+
+    border-radius: 10px;
+    border-style: outset;
+    border-width: 2px;
 }
 
 #screen {

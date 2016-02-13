@@ -1,46 +1,57 @@
 $("document").ready(function () {
-    for (var i = 0; i <= 9; i++) {
-        setPressedFor(i.toString())
-    }
 
+
+    $(".key").each(function (idx, el) {
+        setPressedFor(el.id);
+
+    })
 });
 
-function setPressedFor(chr) {
-    $("#k_" + chr).on("click", function () {
-        pressed(chr);
+function setPressedFor(id) {
+
+    var el = $("#" + id);
+    $("#" + id).on("click", function () {
+        pressed(el, el.text());
     });
 }
 
 var current = "";
-function pressed(text) {
+var hasDot = false;
 
+function pressed(el, text) {
+    try {
+        if (text === "=") {
+            current = eval(current).toString();
+        }
+        else if (text === "Del") {
+            if (current.length <= 0)
+                return;
 
-    current += text;
+            current = current.slice(0, -1);
+        }
+        else if (text === "Clear") {
+            current = "";
+            hasDot = false;
+        }
+        else if (text === ".") {
+            if (hasDot === false) {
+                current += text;
+                hasDot = true;
+            }
+        }
+        else {
+            current += text;
+        }
 
-    $("#screen").val(current);
+        $("#screen").val(current);
+    }
+    catch (e) {
 
-    /*
-     var r;
+    }
+    finally {
+        el.blur()
+    }
 
-     do
-     {
-     r = getRandom(quotes.length);
-     }
-     while (r === lastRand);
-
-     lastRand = r;
-
-     console.log(r);
-
-     $("#quote").animate({opacity: 0}, 500, function () {
-     $(this).text(quotes[r][0])
-     $(this).animate({opacity: 1}, 500)
-     });
-
-     $("#author").animate({opacity: 0}, 500, function () {
-     $(this).text("-" + quotes[r][1])
-     $(this).animate({opacity: 1}, 500)
-     });*/
 }
 
 function encode(text) {
