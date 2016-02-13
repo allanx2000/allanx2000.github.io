@@ -5,7 +5,11 @@ body {
 }
 
 #navbar {
-    background-color: rgba(26, 137, 232, 1);
+    background-color: rgb(25, 138, 229);
+}
+
+.navbar-toggle {
+    background-color: rgb(197, 197, 197);
 }
 
 #navmenu li a {
