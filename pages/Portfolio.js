@@ -54,12 +54,9 @@ function generatePortfolio() {
         //TODO: Div to wrap image in fixed size box
         var item = $("<div class='portfolio_item'/>");
         item.append($("<div class='portfolio_img_div'><img src='" + project.img + "'/></div>"));
-        item.append($("<a class='portfolio_link' target='_blank'  href='" + (isCodePen ? project.cp : project.url) + "'>" + project.name + "</a>"));
+        item.append($("<a class='portfolio_link center-text' target='_blank'  href='" + (isCodePen ? project.cp : project.url) + "'>" + project.name + "</a>"));
 
-        //var inside = $("<div class='inside'></div>");
-        //inside.append(item);
-
-        var col = $("<div class='" + colClasses + "'/>");
+        var col = $("<div class='" + colClasses + "'/>"); //Need this to put gap between items
         col.append(item);
 
         items.push(col);

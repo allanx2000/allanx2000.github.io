@@ -106,7 +106,7 @@ body {
     border-style: ridge;
     padding: 10px;
 
-    margin-bottom: 2vh;
+    margin: .2em;
 
     background-color: rgba(217, 217, 217, 0.65);
 }
@@ -121,9 +121,9 @@ body {
 
 .portfolio_link {
     margin: 2vh auto;
-    position: relative;
+
     display: table;
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-align: center;
     color: #ececec;
 
