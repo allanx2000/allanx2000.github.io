@@ -5,7 +5,27 @@ var PORTFOLIO_GRID = "#portfolio_grid";
 
 var colClasses = "col-xs-12 col-md-4";
 
+function makeScrollTo(anchorName) {
+    var a = $("a[name='" + anchorName + "']");
+
+    return function () {
+        $("html,body").animate({
+                scrollTop: a.offset().top
+            },
+            "slow"
+        )
+    }
+}
+
 $("document").ready(function () {
+
+    //Add Scroll Effects
+    $("#navmenu a").each(function (idx, el) {
+        $(el).attr("href", "#");
+        $(el).on("click", makeScrollTo(el.text.toLowerCase()))
+    });
+
+    //Populate Portfolio Section
     isCodePen = window.location.href.indexOf("codepen.io") >= 0;
 
     portfolio = [
@@ -20,7 +40,14 @@ $("document").ready(function () {
             "url": "Calculator.html",
             "cp": "http://codepen.io/allanx2000/full/dGaVJR/",
             "name": "Simple Calculator"
+        },
+        {
+            "img": "http://innouvous.comlu.com/img/tribute.png",
+            "url": "Tribute.html",
+            "cp": "http://codepen.io/allanx2000/full/WrPKwe/",
+            "name": "A Tribute"
         }
+
     ];
 
     generatePortfolio();
