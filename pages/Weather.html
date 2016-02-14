@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+
+    <link rel='stylesheet' href='../css/bootstrap.min.css'/>
+    <script src='../js/jquery.min.js'></script>
+    <script src='../js/bootstrap.min.js'></script>
+
+    <script src='Weather.js'></script>
+
+    <link rel='stylesheet' href='Weather.css'/>
+    <link rel='stylesheet' href='Base.css'/>
+</head>
+<body>
+
+<h1 id="title" class="text-center">Weather</h1>
+
+<div class="container">
+
+    <div class="row">
+        <div class="content col-xs-12 col-md-5 col-md-offset-4">
+            <div class="row">
+                <div class="col-xs-2" style="display: table-cell; vertical-align: middle">
+                    <label class="pull-right" style="padding: .5em">Location:</label>
+                </div>
+                <div class="col-xs-7">
+                    <input class="form-control" id="location" placeholder="City, State (, Country)" type="text"/>
+                </div>
+
+                <div class="col-xs-2" style="padding-left: 0">
+                    <button id="btn_search" class="btn btn-default">Search</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12" style="margin: 10px">
+                    <button id="btn_current" class="center-block btn btn-default">My Location</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="results" style="display: none">
+        <div class="content col-xs-12 col-md-5 col-md-offset-4">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h2 class="text-center" id="current_location"></h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <img id="weather" width="100px" class="img center-block img-responsive"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <table style="margin: 0 auto">
+                        <tr>
+                            <td>
+                                <h4 id="status" class="text-center"></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="text-right"><span id="temp" style="margin-right: .3em"></span><a
+                                        id="a_fahrenheit">F</a> | <a id="a_celcius">C</a></span></p>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <p><b>Latitude:</b> <span id="d_lat"></span></p>
+                            </td>
+                            <td>
+                                <p><b>Longitude:</b> <span id="d_long"></span></p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p><b>High:</b> <span id="d_hi"></span></p>
+                            </td>
+                            <td>
+                                <p><b>Low:</b> <span id="d_low"></span></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body {
+    background-color: rgba(0, 0, 0, 0.69);
+}
+
+.content {
+    margin-top: 2em;
+    padding: 2%;
+    background-color: white;
+
+    border-radius: 10px;
+}
+
+#title {
+    color: white;
+}
+
+#result {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#temp {
+    font-size: 30pt;
+    font-weight: bold;
+}
+
+#a_fahrenheit, #a_celcius {
+    cursor: pointer;
+    font-size: 1em;
+}
