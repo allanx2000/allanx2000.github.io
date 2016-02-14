@@ -97,6 +97,13 @@ function displayWeather() {
     var hi = lastData[HI];
     var lo = lastData[LOW];
 
+    if (current > hi)
+        hi = current;
+
+    if (current < lo)
+        lo = current;
+
+
     var icon = lastData[ICON];
     $("#weather").attr("src", "http://openweathermap.org/img/w/" + icon + ".png");
 
