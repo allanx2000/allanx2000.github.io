@@ -46,6 +46,12 @@ $("document").ready(function () {
             "url": "Tribute.html",
             "cp": "http://codepen.io/allanx2000/full/WrPKwe/",
             "name": "A Tribute"
+        },
+        {
+            "img": "http://innouvous.comlu.com/img/weather.png",
+            "url": "Weather.html",
+            "cp": "http://codepen.io/allanx2000/full/wMOvqV/",
+            "name": "Weather"
         }
 
     ];
@@ -79,10 +85,9 @@ function generatePortfolio() {
     for (i in portfolio) {
         var project = portfolio[i];
 
-        //TODO: Div to wrap image in fixed size box
         var item = $("<div class=''/>");
         item.append($("<div class='portfolio_img_div'>" +
-            "<img class='img img-responsive center-block' src='" + project.img + "'>" +
+            "<img class='img img-responsive center-block vertical_center' src='" + project.img + "'>" +
             "</div>"));
         item.append($("<h4>" + project.name + "</h4>"));
 

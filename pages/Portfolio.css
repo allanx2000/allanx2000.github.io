@@ -1,3 +1,9 @@
+.bold {
+    font-weight: bold;
+}
+
+
+
 body {
     background-color: #ECECEC;
     /*TODO: Change?*/
@@ -23,10 +29,6 @@ body {
 #navmenu li a:hover {
     color: #000000;
 
-}
-
-.bold {
-    font-weight: bold;
 }
 
 .section {
@@ -135,6 +137,12 @@ body {
 
 .portfolio_img_div {
     height: 200px;
+}
+
+.vertical_center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .portfolio_img_div img {

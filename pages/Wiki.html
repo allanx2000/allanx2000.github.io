@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Wikipedia</title>
+
+    <link rel='stylesheet' href='../css/bootstrap.min.css'/>
+    <script src='../js/jquery.min.js'></script>
+    <script src='../js/bootstrap.min.js'></script>
+
+    <script src='Wiki.js'></script>
+
+    <link rel='stylesheet' href='Wiki.css'/>
+    <link rel='stylesheet' href='Base.css'/>
+
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-5 col-md-offset-4">
+            <h1 id="title" class="text-center">Search Wikipedia</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="content col-xs-12 col-md-5 col-md-offset-4">
+            <div class="row">
+                <div class="col-xs-7">
+                    <label for="search" class="sr-only">Search</label>
+                    <input class="form-control" id="search" placeholder="Search" type="text"/>
+                </div>
+
+                <div class="col-xs-2" style="padding-left: 0">
+                    <button id="btn_search" class="btn btn-default">Search</button>
+                </div>
+
+
+                <div class="col-xs-2" style="padding-left: 0">
+                    <button id="btn_random" class="btn btn-default">Random</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div id="results">
+                </div>
+            </div>
+</body>
+</html>
