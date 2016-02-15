@@ -52,6 +52,12 @@ $("document").ready(function () {
             "url": "Weather.html",
             "cp": "http://codepen.io/allanx2000/full/wMOvqV/",
             "name": "Weather"
+        },
+        {
+            "img": "http://innouvous.comlu.com/img/wiki.png",
+            "url": "Wiki.html",
+            "cp": "http://codepen.io/allanx2000/full/LGapGz/",
+            "name": "Search Wikipedia"
         }
 
     ];
@@ -98,18 +104,6 @@ function generatePortfolio() {
         col.append(link);
 
         items.push(col);
-
-        /*
-        if (gridSize == 12) {
-
-            row = newRow(items);
-            items = [];
-
-            $(PORTFOLIO_GRID).append(row);
-            row = null;
-            gridSize = 0;
-         }*/
-
     }
 
     if (items.length > 0) {

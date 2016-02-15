@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>On Twitch</title>
+
+    <link rel='stylesheet' href='../css/bootstrap.min.css'/>
+    <script src='../js/jquery.min.js'></script>
+    <script src='../js/bootstrap.min.js'></script>
+
+    <script src='Twitch.js'></script>
+
+    <link rel='stylesheet' href='Twitch.css'/>
+
+</head>
+<body>
+<div class="content container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 id="title" class="text-center">On Twitch</h1>
+            <ul id="tabs" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a id="tab_all" href="#" role="tab" data-toggle="tab">All</a>
+                </li>
+                <li role="presentation"><a id="tab_live" href="#" aria-controls="profile" role="tab" data-toggle="tab">Live</a>
+                </li>
+                <li role="presentation"><a id="tab_offline" href="#" aria-controls="messages" role="tab"
+                                           data-toggle="tab">Offline</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row tab-content">
+        <div id="results" class="tab-pane active col-xs-12">
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

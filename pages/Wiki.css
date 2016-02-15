@@ -33,3 +33,7 @@ body {
     cursor: pointer;
     font-size: 1em;
 }
+
+.item {
+    clear: both;
+}
