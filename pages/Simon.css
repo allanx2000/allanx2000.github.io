@@ -1,0 +1,88 @@
+body {
+    background-color: rgba(0, 0, 0, 0.69);
+}
+
+#title {
+    color: white;
+    font-family: 'Lobster', cursive;
+
+}
+
+.button {
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+.btn_0_on {
+    background: #ff9a92 !important;
+}
+
+#btn_0 {
+    background: red;
+}
+
+.btn_1_on {
+    background: #a9ff9f !important;
+}
+
+#btn_1 {
+    background: #1dff00;
+}
+
+.btn_2_on {
+    background: #99ccff !important;
+}
+
+#btn_2 {
+    background: #063dff;
+}
+
+.btn_3_on {
+    background: #ffe0ad !important;
+}
+
+#btn_3 {
+    background: #ffe905;
+}
+
+#options_area {
+    background-color: white;
+}
+
+.options_table td {
+    padding: .3em;
+}
+
+#quoteArea {
+    padding: 6% 0 16% 0;
+}
+
+#quote {
+    font-size: 30pt;
+}
+
+#floater {
+    margin: auto;
+    position: absolute;
+    height: 30em;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#content {
+
+    margin: auto;
+    background-color: white;
+
+    border-style: inset;
+    border-width: 2px;
+    border-radius: 10px;
+
+    height: 100%;
+
+    padding: 3%;
+}

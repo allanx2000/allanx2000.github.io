@@ -26,6 +26,7 @@ var ALL = "all";
 var OFFLINE = "off";
 var LIVE = "live";
 
+var isAnimating = false;
 
 function makeRequest(type, name) {
     var request = "https://api.twitch.tv/kraken/" + type + "/" + name;
@@ -58,6 +59,19 @@ var STATUS = "status";
 var ICON = "icon";
 var USER_NAME = "user";
 var URL = "url";
+
+var started = 0;
+
+function updatedStarted(change)
+{
+    started += change;
+
+    if (started <= 0)
+    {
+        started = 0;
+
+    }
+}
 
 function getStream(channel, mode) {
     $.ajax({
@@ -123,6 +137,16 @@ function makeDiv(data, mode, notExistUser) {
         streaming = data[IS_STREAMING]
 
         row += streaming ? "st-live" : "st-offline";
+    }
+
+    //Update before returning
+    updatedStarted(-1);
+
+    if (started === 0)
+    {
+        $("#results").slideDown({ //fadeIn;
+            "duration": SLIDE_DUR
+        }, function() { isAnimating = false; })
     }
 
     if (mode === LIVE) {
@@ -197,9 +221,6 @@ function makeDiv(data, mode, notExistUser) {
         }
     }
 
-    $("#results").fadeIn({
-        "duration": SLIDE_DUR
-    })
 }
 
 function getChannel(channel, mode) {
@@ -223,12 +244,15 @@ function getChannel(channel, mode) {
 
 function load(mode) {
 
-    $("#results").fadeOut({
+    $("#results").slideUp({ //fadeOut
         "duration": SLIDE_DUR,
         "done": function () {
+
             $("#results").empty();
 
             $.each(channels, function (idx, channel) {
+                updatedStarted(1);
+
                 currentView[channel] = {};
 
                 getStream(channel, mode);
