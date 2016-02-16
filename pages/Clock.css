@@ -1,0 +1,68 @@
+body {
+    background-color: rgba(0, 0, 0, 0.69);
+}
+
+.content {
+
+    margin-top: 5%;
+
+    padding: 2%;
+    background-color: rgb(241, 241, 241);
+
+    border-radius: 10px;
+}
+
+#title {
+    color: black;
+}
+
+#results {
+    margin-bottom: 1em;
+    border-radius: 10px;
+}
+
+#results li {
+    margin-bottom: 1em;
+}
+
+#input_table {
+
+}
+
+#input_table tr td {
+    padding: .4em;
+}
+
+#input_div {
+    display: table;
+    background-color: white;;
+    border-color: black;
+}
+
+#btn_start {
+    height: 5em;
+    vertical-align: middle;
+}
+
+.work {
+    color: red;
+}
+
+.break {
+    color: green;
+}
+
+.status {
+
+}
+
+.status a {
+    text-decoration: none;
+    color: #838188;
+    font-size: 15pt;
+    text-align: center;
+}
+
+.status a:hover {
+    color: black;
+}

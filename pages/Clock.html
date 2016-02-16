@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pomodoro's Timer</title>
+
+    <link rel='stylesheet' href='../css/bootstrap.min.css'/>
+    <script src='../js/jquery.min.js'></script>
+    <script src='../js/bootstrap.min.js'></script>
+
+    <script src='Clock.js'></script>
+
+    <link rel='stylesheet' href='Clock.css'/>
+
+</head>
+<body>
+<div class="content container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 id="title" class="text-center">Pomodoro's Timer</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div id="input_div" class="center-block">
+                <table id="input_table">
+                    <tr>
+                        <td>
+                            <label>Work Length:</label>
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                            <div class="input-group">
+                                <input id="t_work" maxlength="3" class="form-control" type="number"/>
+                                <span class="input-group-addon">minutes</span>
+                            </div>
+                        </td>
+
+                        <td rowspan="2">
+                            <button id="btn_start" class="btn btn-default">Start</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label>Break Length:</label>
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <input id="t_break" maxlength="3" class="form-control" type="number"/>
+                                <span class="input-group-addon">minutes</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 id="status" class="text-center"></h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <h1 id="time_left" class="text-center"></h1>
+        </div>
+    </div>
+</div>
+</body>
+</html>
