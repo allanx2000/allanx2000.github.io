@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(241, 241, 241);
+}
+
+.content {
+    margin-top: 2em;
+
+}
+
+.cell {
+
+    width: 43pt;
+    height: 43pt;
+
+    border-style: solid;
+    border-color: black;
+    vertical-align: middle;
+    font-size: 20pt;
+}
+
+.cell p {
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    color: black;
+    font-weight: bolder;
+}
+
+#select_x, #select_o {
+    padding: 0 .5em;
+    border-style: none;
+!important;
+}
+
+#input_table {
+
+}
+
+#input_table tr td {
+    padding: .3em;
+}
+
+#input_div {
+    display: table;
+    background-color: white;
+
+    border-style: double;
+    border-color: grey;
+
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+#select_player {
+    /*visibility: hidden;*/
+}
