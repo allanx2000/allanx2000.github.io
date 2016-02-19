@@ -7,6 +7,7 @@ var mode = NOT_RUNNING;
 var currentWork;
 var currentBreak;
 
+
 $("document").ready(function () {
 
     $("#btn_start").click(function () {
@@ -18,10 +19,15 @@ $("document").ready(function () {
 
 function setMode(mode) {
 
+
+    var bgColor = null;
+
     if (mode === NOT_RUNNING) {
 
         currentWork = null;
         currentBreak = null;
+
+        bgColor = "";
 
         $("#btn_start").text("Start");
         $("#status").text("Not Running");
@@ -37,17 +43,19 @@ function setMode(mode) {
 
         $("#status").text(mode === WORK ? "Work..." : "Break...");
 
-        $("#status").removeClass((mode === WORK) ? "break" : "work");
-        $("#status").addClass((mode === WORK) ? "work" : "breal");
+        //$("#status").removeClass((mode === WORK) ? "break" : "work");
+        //$("#status").addClass((mode === WORK) ? "work" : "break");
 
         if (mode === WORK) {
-
+            bgColor = "#e63640";
         }
         else {
-
+            bgColor = "#00dd00";
         }
-
     }
+
+    $(".content").css("background-color", bgColor);
+
 
     this.mode = mode;
 
@@ -114,9 +122,29 @@ function toggleRunning() {
         var workTime = parseInt($("#t_work").val(), 10);
         var breakTime = parseInt($("#t_break").val(), 10);
 
-        if (isNaN(workTime) || isNaN(breakTime) || workTime <= 0 || breakTime <= 0) {
-            console.log("Error");
+        if (isNaN(workTime) ||
+            isNaN(breakTime) ||
+            workTime <= 0 ||
+            breakTime <= 0) {
+
+            var el = $.parseHTML("<div class='alert alert-danger fade in'>" +
+                "<p>Times must be between (inclusive) 1 and 999</p>"
+            );
+
+            $("#alerts").empty();
+            $("#alerts").append(el);
+
             return;
+        }
+
+        if (workTime > 999) {
+            workTime = 999;
+            $("#t_work").val(999);
+        }
+
+        if (breakTime > 999) {
+            breakTime = 999;
+            $("#t_break").val(999);
         }
 
         currentWork = toTimeArray(workTime);

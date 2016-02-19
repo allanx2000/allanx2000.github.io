@@ -1,117 +1,35 @@
 var X = "X";
 var O = "O";
 
-var currentGame = null;
+var SETS = [[0, 4, 8], [6, 4, 2],
+    [0, 1, 2], [3, 4, 5], [6, 7, 8],
+    [0, 3, 6], [1, 4, 7], [2, 5, 8]
+];
 
 var Game = function (player) {
+
     function checkWin(side) {
 
-        function checkRow(row) {
+        for (var a in SETS) {
 
-            var r = row * 3;
+            var arr = SETS[a];
 
-            for (var i = 0; i < 3; i++) {
-                if (side !== board[r + i]) {
-                    return false;
-                }
-            }
-            return true;
-        }
+            var match = arr.reduce(function (prev, cur) {
+                if (board[cur] === side)
+                    prev.push(cur)
+                return prev;
+            }, []);
 
-        function checkCol(col) {
-
-            for (var i = 0; i < 3; i++) {
-                if (side !== board[col + i * 3]) {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-
-        function checkDiags() {
-
-            var diags = [[0, 4, 8], [6, 4, 2]];
-
-            var valid = true;
-
-            for (var a in diags) {
-                var arr = diags[a];
-
-                for (var b = 0; b < arr.length; b++) {
-                    console.log("B: " + board[arr[b]]);
-
-                    if (side !== board[arr[b]]) {
-                        valid = false;
-                    }
-                }
-
-                if (valid)
-                    return true;
-                else
-                    valid = true;
-            }
-
-            return false;
-        }
-
-        for (var i = 0; i < 3; i++) {
-            if (checkRow(i) || checkCol(i))
+            if (match.length === 3)
                 return true;
         }
-
-        if (checkDiags())
-            return true;
-
 
         return false;
     }
 
-    var EMPTY = -1;
-
-    var board = [];
-
-    var player = player;
-    var computer = player === X ? O : X;
-
-    for (var i = 0; i < 9; i++) {
-        board.push(EMPTY);
-    }
-
-    this.getPlayer = function () {
-        return player;
-    };
-
-    /*
-     this.isPlayersTurn = function()
-     {
-     return this.player === this.turn;
-     };
-     */
-
-    this.setPosition = function (val) {
-        if (board[val] !== EMPTY) {
-            return false; //Not empty
-        }
-
-        board[val] = player;
-        fillCell("c_" + val, player)
-
-        if (checkWin(player)) {
-            gameOver("Player win")
-            return;
-        }
-
-        var empties = board.filter(function (val) {
-            return val === EMPTY;
-        })
-
-        if (empties.length === 0) {
-            gameOver("Tie");
-            return;
-        }
-
+    function CPUMove() {
+        //TODO: Check empty?
+        //Empty should return cells left?
         //PC Move
         var i = null;
 
@@ -125,21 +43,88 @@ var Game = function (player) {
         fillCell("c_" + i, computer);
 
         if (checkWin(computer)) {
-            gameOver("Computer Wins");
+            gameOver("Computer Wins!");
             return;
         }
 
-        if (empties.length === 0)
-            gameOver("Tie");
+        if (!checkTie())
+            turn = player;
+    }
 
-        return true;
+    function checkTie() {
+        var empties = board.filter(function (val) {
+            return val === EMPTY;
+        })
+
+        if (empties.length === 0) {
+            gameOver("Tie");
+            return true;
+        }
+        else
+            return false;
+    }
+
+    var EMPTY = -1;
+
+    //Initialize Board
+    var board = [];
+
+    for (var i = 0; i < 9; i++) {
+        board.push(EMPTY);
+    }
+
+
+    //Set types
+    var player = player;
+    var computer = player === X ? O : X;
+
+    //Set turn
+    var turn = player === X ? player : computer;
+    if (turn === computer)
+        CPUMove();
+
+
+    //Getters
+    this.getPlayer = function () {
+        return player;
     };
+
+    this.isPlayersTurn = function () {
+        return player === turn;
+    };
+
+    //----------
+
+    this.makeMove = function (val) {
+        if (board[val] !== EMPTY) { //TODO: or not player turn
+            return false; //Not empty
+        }
+
+        board[val] = player;
+        fillCell("c_" + val, player)
+
+        if (checkWin(player)) {
+            gameOver("Player Win!")
+            return;
+        }
+
+        if (!checkTie())
+        {
+            turn = computer;
+            CPUMove();
+        }
+
+    };
+
 };
+
+var currentGame = null;
+
 
 function setPlayerPoint(id, val) {
 
-    if (inGame()) {
-        currentGame.setPosition(val);
+    if (inGame() && currentGame.isPlayersTurn()) {
+        currentGame.makeMove(val);
     }
 }
 
@@ -149,10 +134,24 @@ function inGame() {
 
 function gameOver(winner) {
     currentGame = null;
-    console.log(winner);
-    //Clear board
-    //Set message
-    //Show select
+
+    updateStatus(winner);
+
+    fade("#select_player", false)
+
+}
+
+function updateStatus(message) {
+    $("#status").text(message);
+}
+
+function fade(id, out) {
+
+    $(id).animate({
+            "opacity": out ? 0 : 100
+        }
+        , 500);
+
 }
 
 function newGame(player) {
@@ -162,9 +161,18 @@ function newGame(player) {
     if (inGame())
         return;
 
+    for (var i = 0; i < 9; i++) {
+        $("#c_" + i).empty();
+    }
+
+    fade("#select_player", true)
+
     currentGame = new Game(player);
 
-    //TODO: Hide select
+
+    updateStatus("Playing...");
+
+
 }
 
 $("document").ready(function () {

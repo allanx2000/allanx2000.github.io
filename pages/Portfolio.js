@@ -64,7 +64,21 @@ $("document").ready(function () {
             "url": "Twitch.html",
             "cp": "http://codepen.io/allanx2000/full/mVoqMz/",
             "name": "On Twitch"
+        },
+        {
+            "img": "http://innouvous.comlu.com/img/clock.png",
+            "url": "Clock.html",
+            "cp": "http://codepen.io/allanx2000/full/mVoqMz/",
+            "name": "Pomodoro's Timer"
         }
+        ,
+        {
+            "img": "http://innouvous.comlu.com/img/simon.png",
+            "url": "Simon.html",
+            "cp": "http://codepen.io/allanx2000/full/mVoqMz/",
+            "name": "Simon"
+        }
+
 
     ];
 

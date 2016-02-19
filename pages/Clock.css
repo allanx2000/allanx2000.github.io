@@ -1,28 +1,20 @@
 body {
-    background-color: rgba(0, 0, 0, 0.69);
+    background-color: rgb(241, 241, 241);
 }
 
 .content {
 
-    margin-top: 5%;
+    margin: 5%;
 
     padding: 2%;
-    background-color: rgb(241, 241, 241);
+    background-color: rgb(255, 242, 146);
 
     border-radius: 10px;
 }
 
 #title {
     color: black;
-}
-
-#results {
-    margin-bottom: 1em;
-    border-radius: 10px;
-}
-
-#results li {
-    margin-bottom: 1em;
+    font-weight: bolder;
 }
 
 #input_table {
@@ -35,34 +27,20 @@ body {
 
 #input_div {
     display: table;
-    background-color: white;;
-    border-color: black;
+    background-color: white;
+
+    border-style: double;
+    border-color: grey;
+
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+#status {
+    font-weight: bold;
 }
 
 #btn_start {
     height: 5em;
     vertical-align: middle;
-}
-
-.work {
-    color: red;
-}
-
-.break {
-    color: green;
-}
-
-.status {
-
-}
-
-.status a {
-    text-decoration: none;
-    color: #838188;
-    font-size: 15pt;
-    text-align: center;
-}
-
-.status a:hover {
-    color: black;
 }
