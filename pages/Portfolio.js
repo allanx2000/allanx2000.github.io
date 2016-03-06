@@ -30,55 +30,55 @@ $("document").ready(function () {
     portfolio = {
         "FreeCodeCamp": [
             {
-                "img": "http://innouvous.comlu.com/img/random_quote.png",
+                "img": "/img/random_quote.png",
                 "url": "RandomQuotes.html",
                 "cp": "http://codepen.io/allanx2000/full/PZVYYE/",
                 "name": "Random Quotes Generator"
             },
             {
-                "img": "http://innouvous.comlu.com/img/calculator.png",
+                "img": "/img/calculator.png",
                 "url": "Calculator.html",
                 "cp": "http://codepen.io/allanx2000/full/dGaVJR/",
                 "name": "Simple Calculator"
             },
             {
-                "img": "http://innouvous.comlu.com/img/tribute.png",
+                "img": "/img/tribute.png",
                 "url": "Tribute.html",
                 "cp": "http://codepen.io/allanx2000/full/WrPKwe/",
                 "name": "A Tribute"
             },
             {
-                "img": "http://innouvous.comlu.com/img/weather.png",
+                "img": "/img/weather.png",
                 "url": "Weather.html",
                 "cp": "http://codepen.io/allanx2000/full/wMOvqV/",
                 "name": "Weather"
             },
             {
-                "img": "http://innouvous.comlu.com/img/wiki.png",
+                "img": "/img/wiki.png",
                 "url": "Wiki.html",
                 "cp": "http://codepen.io/allanx2000/full/LGapGz/",
                 "name": "Search Wikipedia"
             },
             {
-                "img": "http://innouvous.comlu.com/img/twitch.png",
+                "img": "/img/twitch.png",
                 "url": "Twitch.html",
                 "cp": "http://codepen.io/allanx2000/full/mVoqMz/",
                 "name": "On Twitch"
             },
             {
-                "img": "http://innouvous.comlu.com/img/clock.png",
+                "img": "/img/clock.png",
                 "url": "Clock.html",
                 "cp": "http://codepen.io/allanx2000/full/mVoqMz/",
                 "name": "Pomodoro's Timer"
             },
             {
-                "img": "http://innouvous.comlu.com/img/simon.png",
+                "img": "/img/simon.png",
                 "url": "Simon.html",
                 "cp": "http://codepen.io/allanx2000/full/mVoqMz/",
                 "name": "Simon"
             },
             {
-                "img": "http://innouvous.comlu.com/img/XOs.png",
+                "img": "/img/XOs.png",
                 "url": "XOs.html",
                 "cp": "http://codepen.io/allanx2000/full/EPzmxe/",
                 "name": "X and O's"
