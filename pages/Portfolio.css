@@ -67,7 +67,7 @@ body {
 }
 
 #sec_about {
-    background-image: url(http://innouvous.comlu.com/img/mountains-blur.jpg);
+    background-image: url(/img/mountains-blur.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -100,7 +100,7 @@ body {
 #sec_portfolio {
     color: white;
     min-height: 60em;
-    background-image: url(http://innouvous.comlu.com/img/projects.jpg);
+    background-image: url(/img/projects.jpg);
     background-size: cover;
 }
 
