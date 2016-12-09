@@ -21,9 +21,13 @@ function showWatcher() {
     var data = {};
     data.name = "Watcher";
 
-    data.description ="<p>The program monitors different sources for updates, similar to a RSS reader but can be from non-web sources as well.";
-    data.description +="<br/><br/>The components are modular and consists of a WPF front-end, core logic library, a extensions framework library (abstract classes used to write plugins and swappable components like the database), and specific implementations.";
-    data.description +="By Reflection, the WPF application can discover plugins from a user-configured location.</p>";
+    data.description ="<p> \
+        I used to manually check sites for updates one or more times a day. In addition, I would need to sort through all the \
+        updates and find the ones I actually cared about. \
+        <br/><br/>Well, this program does most of the work, so you can just scroll down a list see only the updates you care about! \
+        <br/><br/>The program monitors different sources (not only websites) for updates, similar a RSS reader. \
+        However, because you write the plugins, you can have it filter the updates and only show the ones you would want to see. \
+        </p>";
 
     data.image = "/img/personal/watcher-large.png";
 
