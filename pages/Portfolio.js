@@ -31,6 +31,8 @@ function showWatcher() {
     data.link = "https://github.com/allanx2000/Watcher"
 
     createDialog(data);
+
+    return false;
 }
 
 function createDialog(data) {
