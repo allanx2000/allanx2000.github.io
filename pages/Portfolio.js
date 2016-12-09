@@ -125,7 +125,7 @@ $("document").ready(function () {
                 "name": "Comix"
             },
             {
-                "img": "/img/sudoku.png",
+                "img": "/img/personal/sudoku.png",
                 "onClick": "showSudoku()",
                 "name": "Sudoku Solver"
             },
