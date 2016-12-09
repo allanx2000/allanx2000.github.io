@@ -202,7 +202,7 @@ function generatePortfolio() {
             var linkBuilder = null;
             if (project.url || project.cp)
             {
-                linkBuilder = "<a class='portfolio_item portfolio_link center-text' target='_blank' href='" + (isCodePen ? project.cp : project.url) + "'></a>a>";
+                linkBuilder = "<a class='portfolio_item portfolio_link center-text' target='_blank' href='" + (isCodePen ? project.cp : project.url) + "'></a>";
             }
             else if (project.onClick)
             {
