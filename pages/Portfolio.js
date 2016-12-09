@@ -23,7 +23,7 @@ function showWatcher() {
 
     data.description ="<p>The program monitors different sources for updates, similar to a RSS reader but can be from non-web sources as well.";
     data.description +="<br/><br/>The components are modular and consists of a WPF front-end, core logic library, a extensions framework library (abstract classes used to write plugins and swappable components like the database), and specific implementations.";
-    data.description +="By Reflection, the WPF application can discover plugins from a user-configured location.";
+    data.description +="By Reflection, the WPF application can discover plugins from a user-configured location.</p>";
 
     data.image = "/img/personal/watcher-large.png";
 
@@ -34,6 +34,39 @@ function showWatcher() {
 
     return false;
 }
+
+
+function showComix() {
+
+    var data = {};
+    data.name = "Comix";
+
+    data.description ="<p>A web comics reader and downloader. New comic sources can be added by writing plugins.</p>";
+
+    data.image = "/img/personal/comix-large.png";
+
+    createDialog(data);
+
+    return false;
+}
+
+function showSudoku() {
+
+    var data = {};
+    data.name = "Sudoku Solver";
+
+    data.description ="<p>Solves Sudoku Boards using process-of-elimination and trial-and-error</p>";
+
+    data.image = "/img/personal/sudoku-large.png";
+
+    data.linkText = "GitHub";
+    data.link = "https://github.com/allanx2000/SudokuSolver"
+
+    createDialog(data);
+
+    return false;
+}
+
 
 function createDialog(data) {
 
@@ -87,14 +120,14 @@ $("document").ready(function () {
                 "name": "Watcher"
             },
             {
-                "img": "/img/random_quote.png",
-                "onClick": "doSomething('hello2')",
-                "name": "Test"
+                "img": "/img/personal/comix.png",
+                "onClick": "showComix()",
+                "name": "Comix"
             },
             {
-                "img": "/img/random_quote.png",
-                "onClick": "doSomething('hello3')",
-                "name": "Test TEST TEST"
+                "img": "/img/sudoku.png",
+                "onClick": "showSudoku()",
+                "name": "Sudoku Solver"
             },
         ],
         "FreeCodeCamp": [
