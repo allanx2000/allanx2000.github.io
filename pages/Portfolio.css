@@ -122,7 +122,7 @@ body {
 .portfolio_link:link, .portfolio_link:focus, .portfolio_link:visited, .portfolio_link:active {
     margin: 2vh auto;
 
-    display: table;
+    /*display: table;*/
     font-size: 1.3em;
     text-align: center;
     color: white;
@@ -132,7 +132,7 @@ body {
 .portfolio_clickable {
     margin: 2vh auto;
 
-    display: table;
+    /*display: table;*/
     font-size: 1.3em;
     text-align: center;
     color: white;
@@ -163,6 +163,6 @@ body {
 .portfolio_img_div img {
 
     max-height: 200px;
-    width: 95%;
+    /*width: 95%;*/
 
 }
