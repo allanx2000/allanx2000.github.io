@@ -25,6 +25,7 @@ function showWatcher() {
     data.description +="<br/><br/>The components are modular and consists of a WPF front-end, core logic library, a extensions framework library (abstract classes used to write plugins and swappable components like the database), and specific implementations.";
     data.description +="By Reflection, the WPF application can discover plugins from a user-configured location.";
 
+    data.image = "/img/personal/watcher-large.png";
 
     data.linkText = "GitHub";
     data.link = "https://github.com/allanx2000/Watcher"
@@ -38,6 +39,8 @@ function createDialog(data) {
     dialog.attr("title", data.name);
 
     var image = $("#dialog-image")
+    image.attr("src", data.image);
+
 
     var description = $("#dialog-description");
     description.html(data.description);
