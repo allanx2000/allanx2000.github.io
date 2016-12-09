@@ -17,15 +17,44 @@ function makeScrollTo(anchorName) {
 }
 
 function showWatcher() {
-    createDialog();
+
+    var data = {};
+    data.name = "Watcher";
+
+    data.description ="<p>The program monitors different sources for updates, similar to a RSS reader but can be from non-web sources as well.";
+    data.description +="<br/><br/>The components are modular and consists of a WPF front-end, core logic library, a extensions framework library (abstract classes used to write plugins and swappable components like the database), and specific implementations.";
+    data.description +="By Reflection, the WPF application can discover plugins from a user-configured location.";
+
+
+    data.linkText = "GitHub";
+    data.link = "https://github.com/allanx2000/Watcher"
+
+    createDialog(data);
 }
 
 function createDialog(data) {
 
     var dialog = $("#dialog-message");
+    dialog.attr("title", data.name);
+
+    var image = $("#dialog-image")
+
+    var description = $("#dialog-description");
+    description.html(data.description);
+
+    var link = $("#dialog-link");
+
+    if (data.link) {
+        link.html("<a href='" + data.link + "' target='_blank'>" + data.linkText + "</a>")
+    }
+    else
+        link.html("");
+
+    var viewport = $(window).width() - 50;
 
     dialog.dialog({
         modal: true,
+        width: viewport
     });
 }
 
