@@ -169,6 +169,10 @@ function newRow(items) {
     return row;
 }
 
+function openUrl(url) {
+    window.open(url,"_blank");
+}
+
 function generatePortfolio() {
 
     $(PORTFOLIO_GRID).empty();
@@ -202,7 +206,8 @@ function generatePortfolio() {
             var linkBuilder = null;
             if (project.url || project.cp)
             {
-                linkBuilder = "<a class='portfolio_item portfolio_link center-text' target='_blank' href='" + (isCodePen ? project.cp : project.url) + "'></a>";
+                var url = (isCodePen ? project.cp : project.url);
+                linkBuilder = "<div class='portfolio_item portfolio_clickable' target='_blank' onclick=\"openUrl('" + url +  "')" + "\"></div>";
             }
             else if (project.onClick)
             {
