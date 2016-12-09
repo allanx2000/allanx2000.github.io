@@ -61,7 +61,7 @@ function createDialog(data) {
     dialog.dialog({
         modal: true,
         width: width,
-        position: {my:'top', at:'center', of:window},
+        position: {my:'top', at:'top', of:window},
         maxHeight: height
     });
 }
