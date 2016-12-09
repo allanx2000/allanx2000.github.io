@@ -22,11 +22,11 @@ function showWatcher() {
     data.name = "Watcher";
 
     data.description ="<p> \
-        I used to manually check sites for updates one or more times a day. In addition, I would need to sort through all the \
+        I used to manually check sites for updates several times a day. In addition, I would need to sort through all the \
         updates and find the ones I actually cared about. \
-        <br/><br/>Well, this program does most of the work, so you can just scroll down a list see only the updates you care about! \
+        <br/><br/>Well, this program does most of the work, so you can just scroll down a list and see only the updates you care about! \
         <br/><br/>The program monitors different sources (not only websites) for updates, similar a RSS reader. \
-        However, because you write the plugins, you can have it filter the updates and only show the ones you would want to see. \
+        However, because you write the plugins, you can have it filter and only show the ones you would want to see. \
         </p>";
 
     data.image = "/img/personal/watcher-large.png";
@@ -59,7 +59,7 @@ function showSudoku() {
     var data = {};
     data.name = "Sudoku Solver";
 
-    data.description ="<p>Solves Sudoku Boards using process-of-elimination and trial-and-error</p>";
+    data.description ="<p>Solves Sudoku boards using process-of-elimination and trial-and-error</p>";
 
     data.image = "/img/personal/sudoku-large.png";
 
