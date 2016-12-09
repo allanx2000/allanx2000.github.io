@@ -16,6 +16,19 @@ function makeScrollTo(anchorName) {
     }
 }
 
+function showWatcher() {
+    createDialog();
+}
+
+function createDialog(data) {
+
+    var dialog = $("#dialog-message");
+
+    dialog.dialog({
+        modal: true,
+    });
+}
+
 $("document").ready(function () {
 
     //Add Scroll Effects
@@ -28,6 +41,23 @@ $("document").ready(function () {
     isCodePen = window.location.href.indexOf("codepen.io") >= 0;
 
     portfolio = {
+        "Personal Projects" : [
+            {
+                "img": "/img/personal/watcher.png",
+                "onClick": "showWatcher()",
+                "name": "Watcher"
+            },
+            {
+                "img": "/img/random_quote.png",
+                "onClick": "doSomething('hello2')",
+                "name": "Test"
+            },
+            {
+                "img": "/img/random_quote.png",
+                "onClick": "doSomething('hello3')",
+                "name": "Test TEST TEST"
+            },
+        ],
         "FreeCodeCamp": [
             {
                 "img": "/img/random_quote.png",
@@ -111,10 +141,11 @@ function generatePortfolio() {
     var row = null;
     var rowSize = 0;
 
-    var items = [];
 
     var keys = Object.keys(portfolio);
     for (key in keys) {
+
+        var items = [];
 
         key = keys[key];
 
@@ -133,7 +164,19 @@ function generatePortfolio() {
                 "</div>"));
             item.append($("<h4>" + project.name + "</h4>"));
 
-            var link = $("<a class='portfolio_item portfolio_link center-text' target='_blank'  href='" + (isCodePen ? project.cp : project.url) + "'></a>");
+            var linkBuilder = null;
+            if (project.url || project.cp)
+            {
+                linkBuilder = "<a class='portfolio_item portfolio_link center-text' target='_blank' href='" + (isCodePen ? project.cp : project.url) + "'></a>a>";
+            }
+            else if (project.onClick)
+            {
+                linkBuilder = "<div class='portfolio_item portfolio_clickable' onClick=\"" + project.onClick + "\"></div>";
+            }
+
+            //var link = $("<a class='portfolio_item portfolio_link center-text' target='_blank'  href='" + (isCodePen ? project.cp : project.url) + "'></a>");
+            var link = $(linkBuilder);
+
             link.append(item);
 
             var col = $("<div class='" + colClasses + "'/>"); //Need this to put gap between items
@@ -141,14 +184,15 @@ function generatePortfolio() {
 
             items.push(col);
         }
+
+        if (items.length > 0) {
+            row = newRow(items);
+            items = [];
+
+            $(PORTFOLIO_GRID).append(row);
+        }
     }
 
-    if (items.length > 0) {
-        row = newRow(items);
-        items = [];
-
-        $(PORTFOLIO_GRID).append(row);
-    }
 }
 
 function encode(text) {

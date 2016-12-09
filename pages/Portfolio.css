@@ -126,7 +126,23 @@ body {
     font-size: 1.3em;
     text-align: center;
     color: white;
+    text-decoration: none;    
+}
+
+.portfolio_clickable {
+    margin: 2vh auto;
+
+    display: table;
+    font-size: 1.3em;
+    text-align: center;
+    color: white;
     text-decoration: none;
+    cursor: pointer;
+}
+
+
+.portfolio_clickable:hover {
+    color: #1e0705;
 }
 
 .portfolio_link:hover {
