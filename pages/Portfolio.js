@@ -56,14 +56,14 @@ function createDialog(data) {
         link.html("");
 
     var width = $(window).width()*.9;
-    var height = $(parent).height();
+    var height = $(window).height()*.95;
 
-    var parent = $('#sec_portfolio');
+    var navBar = $('#navbar');
 
     dialog.dialog({
         modal: true,
         width: width,
-        position: { my:'top', at:'top', of:parent},
+        position: { my:'top', at:'bottom', of:navBar},
         maxHeight: height
     });
 }
