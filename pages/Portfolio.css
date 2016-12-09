@@ -163,5 +163,6 @@ body {
 .portfolio_img_div img {
 
     max-height: 200px;
+    width: 95%;
 
 }

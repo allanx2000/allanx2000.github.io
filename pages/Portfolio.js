@@ -53,11 +53,14 @@ function createDialog(data) {
     else
         link.html("");
 
-    var viewport = $(window).width() - 50;
+    var width = $(window).width()*.9;
+    var height = $(window).height()*.95;
 
     dialog.dialog({
         modal: true,
-        width: viewport
+        width: width,
+        position: {my:'top', at:'center', of:window},
+        maxHeight: height
     });
 }
 
