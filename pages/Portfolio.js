@@ -58,7 +58,7 @@ function showComix() {
 function showUtils() {
 
     var data = {};
-    data.name = "innouvous.Utils";
+    data.name = "Innouvous.Utils";
 
     data.description ="<p> \
         A set of .NET libraries that I created so I don't have to keep rewriting boilerplate code \
@@ -68,7 +68,7 @@ function showUtils() {
         I use the following in almost every project:\
         <ul>\
             <li><b>MVVM:</b> ViewModel and CommandHelper classes that encapsulate the code needed to use INotifyPropertyChanged</li>\
-            <li><b>ResourceDictionary:</b> Defines styles for the elements, especially margin and padding, \
+            <li><b>ResourceDictionary:</b> Defines styles for the controls, especially margin and padding, \
             so I don't have to redefine them in every single apps</li>\
             <li><b>MessageBoxFactory:</b> Utility class for creating MessageBoxes, with more intelligent defaults</li>\
             <li><b>DataBucket:</b> A wrapper around Dictionary&lt;String,Object&gt; so I don't have to explicitly define the backing fields \
@@ -234,7 +234,7 @@ $("document").ready(function () {
             {
                 "img": "/img/personal/utils.png",
                 "onClick": "showUtils()",
-                "name": "innouvous.Utils"
+                "name": "Innouvous.Utils"
             },
             {
                 "img": "/img/personal/sudoku.png",
