@@ -61,8 +61,8 @@ function showUtils() {
     data.name = "innouvous Utils";
 
     data.description ="<p> \
-        A set of .NET libraries that I created so I would not have to keep rewriting boilerplate code \
-        in all my WPF projects. Some of these can be found in PRISM and other frameworks but a lot of the programs I built don't require \
+        A set of .NET libraries that I created so I don't have to keep rewriting boilerplate code \
+        in all my WPF projects. Some of these can be found in PRISM and other frameworks, but a lot of the programs I built don't require \
         all the features and warrant the overhead of setting them up. \
         <br/><br/>\
         I use the following in almost every project:\
@@ -73,6 +73,8 @@ function showUtils() {
             <li>Dialogs: Utility class for creating Win32 dialogs; a bit more user friendly than the default implementation</li>\
             <li>MessageBoxFactory: Utility class for creating MessageBoxes, with more intelligent defaults</li>\
             <li>SingleInstance: Encapsulates the logic to check for existing running instances</li>\
+            <li>DataBucket: A wrapper around Dictionary&lt;String,Object&gt; so I don't have to explicitly define the backing fields \
+            for properties and call INotifyPropertyChanged passing in the property name (in 4.5+, uses CallingMethodName by default)</li>\
         </ul>\
         </p>";
 
