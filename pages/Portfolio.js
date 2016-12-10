@@ -140,56 +140,56 @@ $("document").ready(function () {
         ],
         "FreeCodeCamp": [
             {
-                "img": "/img/random_quote.png",
-                "url": "RandomQuotes.html",
+                "img": "/img/fcc/random_quote.png",
+                "url": "fcc/RandomQuotes.html",
                 "cp": "http://codepen.io/allanx2000/full/PZVYYE/",
                 "name": "Random Quotes Generator"
             },
             {
-                "img": "/img/calculator.png",
-                "url": "Calculator.html",
+                "img": "/img/fcc/calculator.png",
+                "url": "fcc/Calculator.html",
                 "cp": "http://codepen.io/allanx2000/full/dGaVJR/",
                 "name": "Simple Calculator"
             },
             {
-                "img": "/img/tribute.png",
-                "url": "Tribute.html",
+                "img": "/img/fcc/tribute.png",
+                "url": "fcc/Tribute.html",
                 "cp": "http://codepen.io/allanx2000/full/WrPKwe/",
                 "name": "A Tribute"
             },
             {
-                "img": "/img/weather.png",
-                "url": "Weather.html",
+                "img": "/img/fcc/weather.png",
+                "url": "fcc/Weather.html",
                 "cp": "http://codepen.io/allanx2000/full/wMOvqV/",
                 "name": "Weather"
             },
             {
-                "img": "/img/wiki.png",
-                "url": "Wiki.html",
+                "img": "/img/fcc/wiki.png",
+                "url": "fcc/Wiki.html",
                 "cp": "http://codepen.io/allanx2000/full/LGapGz/",
                 "name": "Search Wikipedia"
             },
             {
-                "img": "/img/twitch.png",
-                "url": "Twitch.html",
+                "img": "/img/fcc/twitch.png",
+                "url": "fcc/Twitch.html",
                 "cp": "http://codepen.io/allanx2000/full/mVoqMz/",
                 "name": "On Twitch"
             },
             {
-                "img": "/img/clock.png",
-                "url": "Clock.html",
+                "img": "/img/fcc/clock.png",
+                "url": "fcc/Clock.html",
                 "cp": "http://codepen.io/allanx2000/full/mVoqMz/",
                 "name": "Pomodoro's Timer"
             },
             {
-                "img": "/img/simon.png",
-                "url": "Simon.html",
+                "img": "/img/fcc/simon.png",
+                "url": "fcc/Simon.html",
                 "cp": "http://codepen.io/allanx2000/full/mVoqMz/",
                 "name": "Simon"
             },
             {
-                "img": "/img/XOs.png",
-                "url": "XOs.html",
+                "img": "/img/fcc/XOs.png",
+                "url": "fcc/XOs.html",
                 "cp": "http://codepen.io/allanx2000/full/EPzmxe/",
                 "name": "X and O's"
             }
