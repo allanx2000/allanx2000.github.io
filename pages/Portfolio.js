@@ -2,7 +2,7 @@ var portfolio;
 var isCodePen;
 
 var PORTFOLIO_GRID = "#portfolio_grid";
-var colClasses = "col-xs-6 col-md-4";
+var colClasses = "col-xs-12 col-sm-6 col-md-4";
 
 function makeScrollTo(anchorName) {
     var a = $("a[name='" + anchorName + "']");
