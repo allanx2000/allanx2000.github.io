@@ -41,7 +41,6 @@ function showWatcher() {
     return false;
 }
 
-
 function showComix() {
 
     var data = {};
@@ -50,6 +49,37 @@ function showComix() {
     data.description ="<p>A web comics reader and downloader. New comic sources can be added by writing plugins.</p>";
 
     data.image = "/img/personal/comix-large.png";
+
+    createDialog(data);
+
+    return false;
+}
+
+function showUtils() {
+
+    var data = {};
+    data.name = "innouvous Utils";
+
+    data.description ="<p> \
+        A set of .NET libraries that I created so I would not have to keep rewriting boilerplate code \
+        in all my WPF projects. Some of these can be found in PRISM and other frameworks but a lot of the programs I built don't require \
+        all the features and warrant the overhead of setting them up. \
+        <br/><br/>\
+        I use the following in almost every project:\
+        <ul>\
+            <li>MVVM: ViewModel and CommandHelper classes that encapsulate the code needed to use INotifyPropertyChanged</li>\
+            <li>ResourceDictionary: Defines styles for the elements, especially margin and padding, \
+            so I don't have to redefine them in every single apps</li>\
+            <li>Dialogs: Utility class for creating Win32 dialogs; a bit more user friendly than the default implementation</li>\
+            <li>MessageBoxFactory: Utility class for creating MessageBoxes, with more intelligent defaults</li>\
+            <li>SingleInstance: Encapsulates the logic to check for existing running instances</li>\
+        </ul>\
+        </p>";
+
+    data.image = "/img/personal/utils.png";
+
+    data.linkText = "GitHub";
+    data.link = "https://github.com/allanx2000/Innouvous.Utils"
 
     createDialog(data);
 
@@ -198,6 +228,11 @@ $("document").ready(function () {
                 "img": "/img/personal/comix.png",
                 "onClick": "showComix()",
                 "name": "Comix"
+            },
+            {
+                "img": "/img/personal/utils.png",
+                "onClick": "showUtils()",
+                "name": "innouvoua Utila"
             },
             {
                 "img": "/img/personal/sudoku.png",
