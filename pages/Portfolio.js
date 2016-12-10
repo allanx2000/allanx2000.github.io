@@ -142,7 +142,6 @@ function showBalanceTracker() {
 function createDialog(data) {
 
     var dialog = $("#dialog-message");
-    dialog.attr("title", data.name);
 
     var image = $("#dialog-image")
     image.attr("src", data.image);
@@ -166,6 +165,7 @@ function createDialog(data) {
 
     dialog.dialog({
         modal: true,
+        title: data.name,
         width: width,
         show: 'fade',
         hide: 'fade',
