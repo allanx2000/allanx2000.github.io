@@ -16,6 +16,8 @@ function makeScrollTo(anchorName) {
     }
 }
 
+/* Personal Projects */
+
 function showWatcher() {
 
     var data = {};
@@ -104,6 +106,8 @@ function createDialog(data) {
         maxHeight: height
     });
 }
+
+/* ----------- */
 
 $("document").ready(function () {
 
