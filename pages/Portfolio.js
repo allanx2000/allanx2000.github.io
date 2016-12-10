@@ -58,7 +58,7 @@ function showComix() {
 function showUtils() {
 
     var data = {};
-    data.name = "innouvous Utils";
+    data.name = "innouvous.Utils";
 
     data.description ="<p> \
         A set of .NET libraries that I created so I don't have to keep rewriting boilerplate code \
@@ -73,7 +73,7 @@ function showUtils() {
             <li><b>MessageBoxFactory:</b> Utility class for creating MessageBoxes, with more intelligent defaults</li>\
             <li><b>DataBucket:</b> A wrapper around Dictionary&lt;String,Object&gt; so I don't have to explicitly define the backing fields \
             for properties and call INotifyPropertyChanged passing in the property name (in 4.5+, uses CallingMethodName by default)</li>\
-        <li>SingleInstance:</b> Encapsulates the logic to check for existing running instances</li>\
+            <li><b>SingleInstance:</b> Encapsulates the logic to check for existing running instances</li>\
             <li><b>Dialogs:</b> Utility class for creating Win32 dialogs; a bit more user friendly than the default implementation</li>\
             </ul>\
         </p>";
@@ -234,7 +234,7 @@ $("document").ready(function () {
             {
                 "img": "/img/personal/utils.png",
                 "onClick": "showUtils()",
-                "name": "innouvous Utils"
+                "name": "innouvous.Utils"
             },
             {
                 "img": "/img/personal/sudoku.png",
