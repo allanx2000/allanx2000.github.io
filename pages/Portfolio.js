@@ -167,6 +167,8 @@ function createDialog(data) {
     dialog.dialog({
         modal: true,
         width: width,
+        show: 'fade',
+        hide: 'fade',
         position: { my:'top', at:'bottom', of:navBar},
         maxHeight: height
     });
