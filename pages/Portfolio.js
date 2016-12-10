@@ -73,6 +73,71 @@ function showSudoku() {
     return false;
 }
 
+function showMyCommute() {
+
+    var data = {};
+    data.name = "My Commute";
+
+    data.description ="<p>I live almost an hour away from the office and also need to drive 30 minutes to the train station.\
+        Bad weather and accidents, expecially in the winter months, can cause huge delays. This app uses Google Maps API to \
+        check how long it would take to get to the station in the current traffic, so I can consider whether I should work from home or not.</p>";
+
+    data.image = "/img/personal/myCommute.png";
+
+    createDialog(data);
+
+    return false;
+}
+
+function showNJT() {
+
+    var data = {};
+    data.name = "NJT Times";
+
+    data.description ="<p>So I usually use NJ Rails, which is a very well made app. However, recently it didn't work, the real time schedules weren't updating. \ \
+    I had to switch to the official app which is SLOOOOOOOOOOOOOOOW! One day, I had a thought: I could find the underlying API (which turned out to be REST) and use it\
+    to get the times myself! And this is the result. The functionality is not as complete as the others but it does what I need it to do.\
+    </p>";
+
+    data.image = "/img/personal/njtTimes.png";
+
+    createDialog(data);
+
+    return false;
+}
+
+function showBlinkist() {
+
+    var data = {};
+    data.name = "Blinkist Stats";
+
+    data.description ="<p>I am an avid reader but my reading list is very very long, several hundred books, and unfortunately I am cannot speed read. \
+      Then I came across <a href='https://app.blinkist.com/' target='_blank'>Blinkist</a> which summarizes books into short reads that give the main ideas.\
+      I wanted Stats though which it did not provide, so I wrote an app for it. It tracks how many books are read/added each day.\
+      <br/><br/>\
+      I don't know if it motivates me or not but it feels good to know how many books I've read in a day and to see the Total Unread count go down.</p>";
+
+    data.image = "/img/personal/blinkistStats.png";
+
+    createDialog(data);
+
+    return false;
+}
+
+function showBalanceTracker() {
+
+    var data = {};
+    data.name = "Balance Tracker";
+
+    data.description ="<p>I don't use my MetroCard often so just needed something to keep track of the balance and also easily update it... \
+        so I wrote an app for it.</p>";
+
+    data.image = "/img/personal/balanceTracker.png";
+
+    createDialog(data);
+
+    return false;
+}
 
 function createDialog(data) {
 
@@ -136,6 +201,26 @@ $("document").ready(function () {
                 "img": "/img/personal/sudoku.png",
                 "onClick": "showSudoku()",
                 "name": "Sudoku Solver"
+            },
+            {
+                "img": "/img/personal/myCommute.png",
+                "onClick": "showMyCommute()",
+                "name": "My Commute"
+            },
+            {
+                "img": "/img/personal/njtTimes.png",
+                "onClick": "showNJT()",
+                "name": "njtTimes"
+            },
+            {
+                "img": "/img/personal/blinkistStats.png",
+                "onClick": "showBlinkist()",
+                "name": "Blinkist Stats"
+            },
+            {
+                "img": "/img/personal/balanceTracker.png",
+                "onClick": "showBalanceTracker()",
+                "name": "Balance Tracker"
             },
         ],
         "FreeCodeCamp": [
