@@ -67,15 +67,15 @@ function showUtils() {
         <br/><br/>\
         I use the following in almost every project:\
         <ul>\
-            <li>MVVM: ViewModel and CommandHelper classes that encapsulate the code needed to use INotifyPropertyChanged</li>\
-            <li>ResourceDictionary: Defines styles for the elements, especially margin and padding, \
+            <li><b>MVVM:</b> ViewModel and CommandHelper classes that encapsulate the code needed to use INotifyPropertyChanged</li>\
+            <li><b>ResourceDictionary:</b> Defines styles for the elements, especially margin and padding, \
             so I don't have to redefine them in every single apps</li>\
-            <li>Dialogs: Utility class for creating Win32 dialogs; a bit more user friendly than the default implementation</li>\
-            <li>MessageBoxFactory: Utility class for creating MessageBoxes, with more intelligent defaults</li>\
-            <li>SingleInstance: Encapsulates the logic to check for existing running instances</li>\
-            <li>DataBucket: A wrapper around Dictionary&lt;String,Object&gt; so I don't have to explicitly define the backing fields \
+            <li><b>MessageBoxFactory:</b> Utility class for creating MessageBoxes, with more intelligent defaults</li>\
+            <li><b>DataBucket:</b> A wrapper around Dictionary&lt;String,Object&gt; so I don't have to explicitly define the backing fields \
             for properties and call INotifyPropertyChanged passing in the property name (in 4.5+, uses CallingMethodName by default)</li>\
-        </ul>\
+        <li>SingleInstance:</b> Encapsulates the logic to check for existing running instances</li>\
+            <li><b>Dialogs:</b> Utility class for creating Win32 dialogs; a bit more user friendly than the default implementation</li>\
+            </ul>\
         </p>";
 
     data.image = "/img/personal/utils.png";
