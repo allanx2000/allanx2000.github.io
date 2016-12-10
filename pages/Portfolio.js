@@ -234,7 +234,7 @@ $("document").ready(function () {
             {
                 "img": "/img/personal/utils.png",
                 "onClick": "showUtils()",
-                "name": "innouvous Utila"
+                "name": "innouvous Utils"
             },
             {
                 "img": "/img/personal/sudoku.png",
